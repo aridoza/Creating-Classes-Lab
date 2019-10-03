@@ -7,15 +7,15 @@ public class Animal {
     private String name;
     private String type;
 
-    public Animal(int numLegs, int topSpeed, boolean isEndangered, String name, String type){
-        //Set properties here
-        this.numLegs = numLegs;
-        this.topSpeed = topSpeed;
-        this.isEndangered = isEndangered;
-        this.name = name;
-        this.type = type;
-
-    }
+//    public Animal(int numLegs, int topSpeed, boolean isEndangered, String name, String type){
+//        //Set properties here
+//        this.numLegs = numLegs;
+//        this.topSpeed = topSpeed;
+//        this.isEndangered = isEndangered;
+//        this.name = name;
+//        this.type = type;
+//
+//    }
     //Put getters and setters here
     public int getNumLegs() {
         return numLegs;
@@ -63,6 +63,16 @@ public class Animal {
 
     public String moreStats() {
         return name + " is a " + type + " with " + numLegs + " legs.";
+    }
+
+    public String showAnimalInfo() {
+        return "Great! Your new pet is named " + name + " and is of type " + type + ". It has " + numLegs
+                + " legs and its top speed is " + topSpeed + "mph.";
+    }
+
+    @Override
+    public String toString() {
+        return "The " + type + " has a top speed of " + topSpeed + "mph.";
     }
 }
 
